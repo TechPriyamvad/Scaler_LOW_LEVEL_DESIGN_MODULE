@@ -7,36 +7,16 @@ public class Student {
     private String email;
     private String pno;
 
-    Student(int age,int psp,String name,String email,String pno){
-        //validate age
-        if(age < 0 || age > 120){
-            throw new IllegalArgumentException("age should be between 0 and 120");
-        }
-        this.age = age;
+    private Student(Builder bldr){
+        this.age = bldr.age;
+        this.psp = bldr.psp;
+        this.name = bldr.name;
+        this.email = bldr.email;
+        this.pno = bldr.pno;
+    }
 
-        //validate psp
-        if(psp < 0 || psp > 100){
-            throw new IllegalArgumentException("psp should be between 0 and 100");
-        }
-        this.psp = psp;
-
-        //validate name
-        if(name==null || name.length()==0){
-            throw new IllegalArgumentException("name should not be null or empty");
-        }
-        this.name = name;
-
-        //validate email
-        if(email==null || email.length()==0){
-            throw new IllegalArgumentException("email should not be null or empty");
-        }
-        this.email = email;
-
-        //validate pno
-        if(pno==null || pno.length()==0 || pno.length()!=10){
-            throw new IllegalArgumentException("pno should not be null or empty");
-        }
-        this.pno = pno;
+    public static Builder getBuilder(){
+        return new Builder();
     }
     public int getAge() {
         return age;
@@ -56,5 +36,92 @@ public class Student {
 
     public String getPno() {
         return pno;
+    }
+
+    public static class Builder {
+        public int age;
+        public int psp;
+        public String name;
+        public String email;
+        public String pno;
+
+        public Builder setAge(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public Builder setPsp(int psp) {
+            this.psp = psp;
+            return this;
+        }
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder setPno(String pno) {
+            this.pno = pno;
+            return this;
+        }
+
+        public Student build(){
+            if(isAgeValid(age) == false){
+                throw new IllegalArgumentException("Age should be between 0 and 120");
+            }
+            if(isPspValid(psp) == false){
+                throw new IllegalArgumentException("PSP should be between 0 and 100");
+            }
+            if(isNameValid(name) == false){
+                throw new IllegalArgumentException("Name should not be empty");
+            }
+            if(isEmailValid(email) == false){
+                throw new IllegalArgumentException("Email should not be empty");
+            }
+            if(isPnoValid(pno) == false){
+                throw new IllegalArgumentException("Phone number should not be empty");
+            }
+            return new Student(this);
+        }
+
+        public static boolean isAgeValid(int age){
+            if(age < 0 || age > 120){
+                return false;
+            }
+            return true;
+        }
+
+        public static boolean isPspValid(int psp){
+            if(psp < 0 || psp > 100){
+                return false;
+            }
+            return true;
+        }
+
+        public static boolean isNameValid(String name){
+            if(name == null || name.length() == 0){
+                return false;
+            }
+            return true;
+        }
+
+        public static boolean isEmailValid(String email){
+            if(email == null || email.length() == 0){
+                return false;
+            }
+            return true;
+        }
+
+        public static boolean isPnoValid(String pno){
+            if(pno == null || pno.length() == 0){
+                return false;
+            }
+            return true;
+        }
     }
 }
