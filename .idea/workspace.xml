@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="969ac8d7-f6ae-4399-b0e1-750452c393ae" name="Changes" comment="added initial setup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DesignPatterns/Builder/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DesignPatterns/Builder/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DesignPatterns/Builder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DesignPatterns/Builder/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +40,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -72,6 +74,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718175699590</updated>
-      <workItem from="1718175700731" duration="511000" />
+      <workItem from="1718175700731" duration="4975000" />
     </task>
     <task id="LOCAL-00001" summary="added initial setup">
       <option name="closed" value="true" />
@@ -90,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718175909502</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added initial setup">
+      <option name="closed" value="true" />
+      <created>1718176261973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718176261973</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added initial setup">
+      <option name="closed" value="true" />
+      <created>1718176271027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718176271027</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
